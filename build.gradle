@@ -1,6 +1,7 @@
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'java-library'
 
 sourceCompatibility = 1.8
 
@@ -9,5 +10,21 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // DateTime Library (Joda Time)
+    compile 'joda-time:joda-time:2.9.9'
+
+    // SAX Parser
+    compile 'sax:sax:2.0.1'
+
+    //HTML Parser
+    compile 'org.jsoup:jsoup:1.11.3'
+
+    // API
+    api 'com.google.guava:guava:23.0'
+
+    // Hibernate
+    implementation 'org.hibernate:hibernate-core:3.6.7.Final'
+
+    // Unit Testing
+    testImplementation 'junit:junit:4.+'
 }
